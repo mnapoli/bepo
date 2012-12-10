@@ -1,0 +1,172 @@
+--- deads-0.6.5.1-sansSpace.conf	2008-03-17 22:13:47.000000000 +0100
++++ deads-0.6.5.1.conf	2008-03-18 22:39:15.000000000 +0100
+@@ -54,6 +54,9 @@
+ L!dead_abovedot	y	U1E8F
+ L!dead_abovedot	Z	Zabovedot
+ L!dead_abovedot	z	zabovedot
++L!dead_abovedot	dead_abovedot	abovedot
++L!dead_abovedot	nobreakspace	U0307
++L!dead_abovedot	space	abovedot
+ 
+ # dead_acute
+ 
+@@ -125,6 +128,9 @@
+ L!dead_acute	y	yacute
+ L!dead_acute	Z	Zacute
+ L!dead_acute	z	zacute
++L!dead_acute	dead_acute	acute
++L!dead_acute	nobreakspace	combining_acute
++L!dead_acute	space	acute
+ 
+ # dead_bar
+ 
+@@ -216,6 +222,9 @@
+ L!dead_breve	o	U014F
+ L!dead_breve	U	Ubreve
+ L!dead_breve	u	ubreve
++L!dead_breve	dead_breve	breve
++L!dead_breve	nobreakspace	U0306
++L!dead_breve	space	breve
+ 
+ # dead_brevebelow
+ 
+@@ -266,6 +275,9 @@
+ L!dead_caron	udiaeresis	U01DA
+ L!dead_caron	Z	Zcaron
+ L!dead_caron	z	zcaron
++L!dead_caron	dead_caron	caron
++L!dead_caron	nobreakspace	U030C
++L!dead_caron	space	caron
+ 
+ # dead_cedilla
+ 
+@@ -297,6 +309,9 @@
+ L!dead_cedilla	s	scedilla
+ L!dead_cedilla	T	Tcedilla
+ L!dead_cedilla	t	tcedilla
++L!dead_cedilla	dead_cedilla	cedilla
++L!dead_cedilla	nobreakspace	U0327
++L!dead_cedilla	space	cedilla
+ 
+ # dead_circumflex
+ 
+@@ -371,6 +386,9 @@
+ L!dead_circumflex	y	ycircumflex
+ L!dead_circumflex	Z	U1E90
+ L!dead_circumflex	z	U1E91
++L!dead_circumflex	dead_circumflex	asciicircum
++L!dead_circumflex	nobreakspace	U0302
++L!dead_circumflex	space	asciicircum
+ 
+ # dead_circumflexbelow
+ 
+@@ -457,6 +475,9 @@
+ dead_currency	w	WonSign
+ dead_currency	Y	U5186
+ dead_currency	y	yen
++dead_currency	dead_currency	currency
++dead_currency	nobreakspace	currency
++dead_currency	space	currency
+ 
+ # dead_diaeresis
+ 
+@@ -495,6 +516,9 @@
+ L!dead_diaeresis	x	U1E8D
+ L!dead_diaeresis	Y	Ydiaeresis
+ L!dead_diaeresis	y	ydiaeresis
++L!dead_diaeresis	dead_diaeresis	diaeresis
++L!dead_diaeresis	nobreakspace	U0308
++L!dead_diaeresis	space	diaeresis
+ 
+ # dead_diagonalstroke
+ 
+@@ -511,6 +535,9 @@
+ L!dead_doubleacute	o	odoubleacute
+ L!dead_doubleacute	U	Udoubleacute
+ L!dead_doubleacute	u	udoubleacute
++L!dead_doubleacute	dead_doubleacute	doubleacute
++L!dead_doubleacute	nobreakspace	U030B
++L!dead_doubleacute	space	doubleacute
+ 
+ # dead_doublegrave
+ 
+@@ -569,6 +596,9 @@
+ L!dead_grave	w	wgrave
+ L!dead_grave	Y	Ygrave
+ L!dead_grave	y	ygrave
++L!dead_grave	dead_grave	grave
++L!dead_grave	nobreakspace	combining_grave
++L!dead_grave	space	grave
+ 
+ # dead_hook
+ 
+@@ -603,6 +633,9 @@
+ L!dead_hook	y	U01B4
+ L!dead_hook	Z	U0224
+ L!dead_hook	z	U0225
++L!dead_hook	dead_hook	U02C0
++L!dead_hook	nobreakspace	U0309
++L!dead_hook	space	U02C0
+ 
+ # dead_hookabove
+ 
+@@ -657,6 +690,9 @@
+ L!dead_horn	uhook	uhornhook
+ L!dead_horn	u	uhorn
+ L!dead_horn	utilde	uhorntilde
++L!dead_horn	dead_horn	U031B
++L!dead_horn	nobreakspace	U031B
++L!dead_horn	space	U031B
+ 
+ # dead_invertedbreve
+ 
+@@ -753,6 +789,9 @@
+ L!dead_macron	u	umacron
+ L!dead_macron	Y	U0232
+ L!dead_macron	y	U0233
++L!dead_macron	dead_macron	macron
++L!dead_macron	nobreakspace	U0304
++L!dead_macron	space	macron
+ 
+ # dead_middletilde
+ 
+@@ -784,6 +823,9 @@
+ L!dead_ogonek	o	U01EB
+ L!dead_ogonek	U	Uogonek
+ L!dead_ogonek	u	uogonek
++L!dead_ogonek	dead_ogonek	ogonek
++L!dead_ogonek	nobreakspace	U0328
++L!dead_ogonek	space	ogonek
+ 
+ # dead_palatalhook
+ 
+@@ -837,6 +879,9 @@
+ L!dead_abovering	u	uring
+ L!dead_abovering	w	U1E98
+ L!dead_abovering	y	U1E99
++L!dead_abovering	dead_abovering	degree
++L!dead_abovering	nobreakspace	U030A
++L!dead_abovering	space	degree
+ 
+ # dead_ringbelow
+ 
+@@ -880,6 +925,9 @@
+ dead_stroke	U028A	U1D7F
+ dead_stroke	Z	Zstroke
+ dead_stroke	z	zstroke
++dead_stroke	dead_stroke	slash
++dead_stroke	nobreakspace	U0338
++dead_stroke	space	slash
+ 
+ # dead_swashtail
+ 
+@@ -932,6 +980,9 @@
+ L!dead_tilde	v	U1E7D
+ L!dead_tilde	Y	Ytilde
+ L!dead_tilde	y	ytilde
++L!dead_tilde	dead_tilde	asciitilde
++L!dead_tilde	nobreakspace	combining_tilde
++L!dead_tilde	space	asciitilde
+ 
+ # dead_tildebelow
+ 

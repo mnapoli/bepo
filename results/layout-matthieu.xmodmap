@@ -1,0 +1,81 @@
+clear    shift
+clear    lock
+clear    control
+clear    mod1
+clear    mod2
+clear    mod3
+clear    mod4
+clear    mod5
+
+keycode 0x31 = dollar numbersign endash paragraph
+keycode 0x0A = quotedbl 1 emdash doublelowquotemark
+keycode 0x0B = less 2 guillemotleft leftdoublequotemark
+keycode 0x0C = greater 3 guillemotright rightdoublequotemark
+keycode 0x0D = parenleft 4 bracketleft lessthanequal
+keycode 0x0E = parenright 5 bracketright greaterthanequal
+keycode 0x0F = at 6 asciicircum
+keycode 0x10 = plus 7 plusminus notsign
+keycode 0x11 = minus 8 U2212 onequarter
+keycode 0x12 = slash 9 division onehalf
+keycode 0x13 = asterisk 0 multiply threequarters
+keycode 0x14 = equal degree notequal minutes
+keycode 0x15 = percent grave U2030 seconds
+
+keycode 0x18 = b B bar brokenbar
+keycode 0x19 = eacute Eacute dead_acute dead_doubleacute
+keycode 0x1A = p P ampersand section
+keycode 0x1B = o O oe OE
+keycode 0x1C = egrave Egrave dead_grave grave
+keycode 0x1D = w W exclamdown
+keycode 0x1E = v V dead_caron
+keycode 0x1F = d D eth ETH
+keycode 0x20 = l L UFDD0
+keycode 0x21 = j J U0133 U0132
+keycode 0x22 = z Z schwa SCHWA
+keycode 0x23 = dead_circumflex exclam ecircumflex Ecircumflex
+
+keycode 0x26 = a A ae AE
+keycode 0x27 = u U ugrave Ugrave
+keycode 0x28 = i I dead_diaeresis dead_abovedot
+keycode 0x29 = e E EuroSign UFDD1
+keycode 0x2A = comma semicolon rightsinglequotemark dead_horn
+keycode 0x2B = c C copyright U017F
+keycode 0x2C = t T thorn THORN
+keycode 0x2D = s S ssharp U1E9E
+keycode 0x2E = r R registered trademark
+keycode 0x2F = n N dead_tilde
+keycode 0x30 = m M dead_macron masculine
+keycode 0x33 = ccedilla Ccedilla dead_cedilla UFDD3
+
+keycode 0x5E = ecircumflex Ecircumflex slash
+keycode 0x34 = agrave Agrave backslash
+keycode 0x35 = y Y braceleft leftsinglequotemark
+keycode 0x36 = x X braceright rightsinglequotemark
+keycode 0x37 = period colon ellipsis periodcentered
+keycode 0x38 = k K asciitilde U2328
+keycode 0x39 = apostrophe question questiondown dead_hook
+keycode 0x3A = q Q dead_abovering dead_belowdot
+keycode 0x3B = g G UFDD2
+keycode 0x3C = h H dagger doubledagger
+keycode 0x3D = f F dead_ogonek ordfeminine
+keycode 0x41 = space nobreakspace underscore U202F
+
+
+keycode 0x32 = Shift_L
+keycode 0x3E = Shift_R
+
+keycode 0x25 = Control_L
+keycode 0x73 = Super_L
+keycode 0x40 = Alt_L           Meta_L
+keycode 0x71 = Mode_switch     Meta_R
+keycode 0x74 = Super_R
+keycode 0x75 = Super_R
+keycode 0x6D = Control_R
+
+add  shift   = Shift_L          Shift_R
+add  lock    = Caps_Lock
+add  control = Control_L        Control_R
+add  mod1    = Alt_L
+add  mod2    = Num_Lock
+add  mod4    = Super_L          Super_R
+add  mod5    = ISO_Level3_Shift

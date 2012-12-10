@@ -1,0 +1,1328 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
+<!-- bépo Layout -->
+<!-- http://www.bepo.fr/ -->
+<!-- version 1.0 -->
+<keyboard group="126" id="-6538" name="bépo" maxout="5">
+  <!--
+    This layout is designed for ISO and ANSI keyboards. The extra
+    key on an ISO keyboard (next to the left Shift) is optional,
+    characters on it are also accessible through other keys.
+
+    Problem: On Mac ANSI keyboards, that extra key is not simply
+    missing: on ISO keyboards, the extra key sends the code 50 and
+    the key below the Esc key sends the code 10; on ANSI keyboards,
+    the key below the Esc key sends the code 50. So the key next to
+    the left Shift on ISO keyboards is moved below the Esc key on
+    ANSI keyboards, the real missing key being the one that sends
+    the code 10.
+
+    So we need a specific layout for ANSI keyboards. There is
+    unfortunately no obvious way for identifying ANSI or ISO
+    keyboards, we need to specify each hardware ID individually. As
+    new keyboards are created, we need to add them to the list.
+    Since this is a layout for the French language and the French
+    AZERTY layout is defined for ISO keyboards, it will mostly be
+    used with ISO keyboards. So we will define the default layout
+    for ISO keyboards and specify ANSI keyboards individually. This
+    will less likely cause problems as it will cause problems only
+    with new ANSI keyboards.
+
+    Individual keyboard hardware IDs are defined in:
+    /Developer/SDKs/MacOSX10.4u.sdk/System/Library/Frameworks/
+    CoreServices.framework/Versions/A/Frameworks/
+    CarbonCore.framework/Versions/A/Headers/Gestalt.h
+    We assume that any keyboard not containing ISO or JIS in its
+    name has an ANSI layout.
+  -->
+  <layouts>
+    <layout first="0" last="0" modifiers="commonModifiers" mapSet="ISO" />
+    <!-- gestaltMacKbd                 = 1, -->
+    <!-- gestaltMacAndPad              = 2, -->
+    <!-- gestaltUnknownThirdPartyKbd   = 3,    /* Unknown 3rd party keyboard. */ -->
+    <!-- gestaltExtADBKbd              = 4, -->
+    <!-- gestaltStdADBKbd              = 5, -->
+    <!-- gestaltPrtblADBKbd            = 6, -->
+    <layout first="1" last="6" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltPrtblISOKbd            = 7, -->
+    <!-- gestaltStdISOADBKbd           = 8, -->
+    <!-- gestaltExtISOADBKbd           = 9, -->
+    <!-- gestaltADBKbdII               = 10, -->
+    <layout first="10" last="10" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltADBISOKbdII            = 11, -->
+    <!-- gestaltPwrBookADBKbd          = 12, -->
+    <layout first="12" last="12" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltPwrBookISOADBKbd       = 13, -->
+    <!-- gestaltAppleAdjustKeypad      = 14, -->
+    <!-- gestaltAppleAdjustADBKbd      = 15, -->
+    <layout first="14" last="15" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltAppleAdjustISOKbd      = 16, -->
+    <!-- gestaltJapanAdjustADBKbd      = 17,   /* Japan Adjustable Keyboard */ -->
+    <!-- gestaltPwrBkExtISOKbd         = 20,   /* PowerBook Extended International Keyboard with function keys */ -->
+    <!-- gestaltPwrBkExtJISKbd         = 21,   /* PowerBook Extended Japanese Keyboard with function keys      */ -->
+    <!-- gestaltPwrBkExtADBKbd         = 24,   /* PowerBook Extended Domestic Keyboard with function keys      */ -->
+    <layout first="24" last="24" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltPS2Keyboard            = 27,   /* PS2 keyboard */ -->
+    <!-- gestaltPwrBkSubDomKbd         = 28,   /* PowerBook Subnote Domestic Keyboard with function keys w/  inverted T  */ -->
+    <layout first="27" last="28" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltPwrBkSubISOKbd         = 29,   /* PowerBook Subnote International Keyboard with function keys w/  inverted T     */ -->
+    <!-- gestaltPwrBkSubJISKbd         = 30,   /* PowerBook Subnote Japanese Keyboard with function keys w/ inverted T    */ -->
+    <!-- gestaltPortableUSBANSIKbd     = 37,   /* Powerbook USB-based internal keyboard, ANSI layout */ -->
+    <layout first="37" last="37" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltPortableUSBISOKbd      = 38,   /* Powerbook USB-based internal keyboard, ISO layout */ -->
+    <!-- gestaltPortableUSBJISKbd      = 39,   /* Powerbook USB-based internal keyboard, JIS layout */ -->
+    <!-- gestaltThirdPartyANSIKbd      = 40,   /* Third party keyboard, ANSI layout.  Returned in Mac OS X Tiger and later. */ -->
+    <layout first="40" last="40" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltThirdPartyISOKbd       = 41,   /* Third party keyboard, ISO layout. Returned in Mac OS X Tiger and later. */ -->
+    <!-- gestaltThirdPartyJISKbd       = 42,   /* Third party keyboard, JIS layout. Returned in Mac OS X Tiger and later. */ -->
+    <!-- gestaltPwrBkEKDomKbd          = 195,  /* (0xC3) PowerBook Domestic Keyboard with Embedded Keypad, function keys & inverted T    */ -->
+    <layout first="195" last="195" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltPwrBkEKISOKbd          = 196,  /* (0xC4) PowerBook International Keyboard with Embedded Keypad, function keys & inverted T   */ -->
+    <!-- gestaltPwrBkEKJISKbd          = 197,  /* (0xC5) PowerBook Japanese Keyboard with Embedded Keypad, function keys & inverted T      */ -->
+    <!-- gestaltUSBCosmoANSIKbd        = 198,  /* (0xC6) original USB Domestic (ANSI) Keyboard */ -->
+    <layout first="198" last="198" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltUSBCosmoISOKbd         = 199,  /* (0xC7) original USB International (ISO) Keyboard */ -->
+    <!-- gestaltUSBCosmoJISKbd         = 200,  /* (0xC8) original USB Japanese (JIS) Keyboard */ -->
+    <!-- gestaltPwrBk99JISKbd          = 201,  /* (0xC9) '99 PowerBook JIS Keyboard with Embedded Keypad, function keys & inverted T               */ -->
+    <!-- gestaltUSBAndyANSIKbd         = 204,  /* (0xCC) USB Pro Keyboard Domestic (ANSI) Keyboard                                 */ -->
+    <layout first="204" last="204" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltUSBAndyISOKbd          = 205,  /* (0xCD) USB Pro Keyboard International (ISO) Keyboard                               */ -->
+    <!-- gestaltUSBAndyJISKbd          = 206   /* (0xCE) USB Pro Keyboard Japanese (JIS) Keyboard                                    */ -->
+    <!-- gestaltPortable2001ANSIKbd    = 202,  /* (0xCA) PowerBook and iBook Domestic (ANSI) Keyboard with 2nd cmd key right & function key moves.     */ -->
+    <layout first="202" last="202" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltPortable2001ISOKbd     = 203,  /* (0xCB) PowerBook and iBook International (ISO) Keyboard with 2nd cmd key right & function key moves.   */ -->
+    <!-- gestaltPortable2001JISKbd     = 207   /* (0xCF) PowerBook and iBook Japanese (JIS) Keyboard with function key moves.                   */ -->
+    <!-- gestaltUSBProF16ANSIKbd       = 34,   /* (0x22) USB Pro Keyboard w/ F16 key Domestic (ANSI) Keyboard */ -->
+    <layout first="34" last="34" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltUSBProF16ISOKbd        = 35,   /* (0x23) USB Pro Keyboard w/ F16 key International (ISO) Keyboard */ -->
+    <!-- gestaltUSBProF16JISKbd        = 36,   /* (0x24) USB Pro Keyboard w/ F16 key Japanese (JIS) Keyboard */ -->
+    <!-- gestaltProF16ANSIKbd          = 31,   /* (0x1F) Pro Keyboard w/F16 key Domestic (ANSI) Keyboard */ -->
+    <layout first="31" last="31" modifiers="commonModifiers" mapSet="ANSI" />
+    <!-- gestaltProF16ISOKbd           = 32,   /* (0x20) Pro Keyboard w/F16 key International (ISO) Keyboard */ -->
+    <!-- gestaltProF16JISKbd           = 33    /* (0x21) Pro Keyboard w/F16 key Japanese (JIS) Keyboard */ -->
+  </layouts>
+  <modifierMap id="commonModifiers" defaultIndex="0">
+    <keyMapSelect mapIndex="0">
+      <modifier keys="" />
+      <modifier keys="anyShift? command caps?" />
+    </keyMapSelect>
+    <keyMapSelect mapIndex="1">
+      <!-- <modifier keys="anyShift caps?" /> -->
+      <modifier keys="anyShift" />
+    </keyMapSelect>
+    <keyMapSelect mapIndex="2">
+      <modifier keys="caps" />
+    </keyMapSelect>
+    <keyMapSelect mapIndex="3">
+      <modifier keys="anyShift caps" />
+    </keyMapSelect>
+    <keyMapSelect mapIndex="4">
+      <modifier keys="anyOption" />
+    </keyMapSelect>
+    <keyMapSelect mapIndex="5">
+      <!-- <modifier keys="anyShift anyOption command? caps?" /> -->
+      <modifier keys="anyShift anyOption command?" />
+    </keyMapSelect>
+    <keyMapSelect mapIndex="6">
+      <modifier keys="anyShift anyOption command? caps" />
+    </keyMapSelect>
+    <keyMapSelect mapIndex="7">
+      <modifier keys="anyOption caps" />
+    </keyMapSelect>
+    <keyMapSelect mapIndex="8">
+      <modifier keys="anyOption command caps?" />
+    </keyMapSelect>
+    <keyMapSelect mapIndex="9">
+      <modifier keys="anyShift? anyOption? anyControl command? caps?" />
+    </keyMapSelect>
+  </modifierMap>
+  <keyMapSet id="ISO">
+    <keyMap index="0">  <!-- No modifiers -->
+      <key code="0" action="%(AC01)s" />
+      <key code="1" action="%(AC02)s" />
+      <key code="2" action="%(AC03)s" />
+      <key code="3" action="%(AC04)s" />
+      <key code="4" action="%(AC06)s" />
+      <key code="5" action="%(AC05)s" />
+      <key code="6" action="%(AB01)s" />
+      <key code="7" action="%(AB02)s" />
+      <key code="8" action="%(AB03)s" />
+      <key code="9" action="%(AB04)s" />
+      <key code="10" action="%(TLDE)s" />
+      <key code="11" action="%(AB05)s" />
+      <key code="12" action="%(AD01)s" />
+      <key code="13" action="%(AD02)s" />
+      <key code="14" action="%(AD03)s" />
+      <key code="15" action="%(AD04)s" />
+      <key code="16" action="%(AD06)s" />
+      <key code="17" action="%(AD05)s" />
+      <key code="18" action="%(AE01)s" />
+      <key code="19" action="%(AE02)s" />
+      <key code="20" action="%(AE03)s" />
+      <key code="21" action="%(AE04)s" />
+      <key code="22" action="%(AE06)s" />
+      <key code="23" action="%(AE05)s" />
+      <key code="24" action="%(AE12)s" />
+      <key code="25" action="%(AE09)s" />
+      <key code="26" action="%(AE07)s" />
+      <key code="27" action="%(AE11)s" />
+      <key code="28" action="%(AE08)s" />
+      <key code="29" action="%(AE10)s" />
+      <key code="30" action="%(AD12)s" />
+      <key code="31" action="%(AD09)s" />
+      <key code="32" action="%(AD07)s" />
+      <key code="33" action="%(AD11)s" />
+      <key code="34" action="%(AD08)s" />
+      <key code="35" action="%(AD10)s" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" action="%(AC09)s" />
+      <key code="38" action="%(AC07)s" />
+      <key code="39" action="%(AC11)s" />
+      <key code="40" action="%(AC08)s" />
+      <key code="41" action="%(AC10)s" />
+      <key code="42" action="%(BKSL)s" />
+      <key code="43" action="%(AB08)s" />
+      <key code="44" action="%(AB10)s" />
+      <key code="45" action="%(AB06)s" />
+      <key code="46" action="%(AB07)s" />
+      <key code="47" action="%(AB09)s" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action="%(SPCE)s" />
+      <key code="50" action="%(LSGT)s" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" action="," /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" action="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" action="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+      <!-- gap, 127 -->
+    </keyMap>
+    <keyMap index="1">  <!-- shift -->
+      <key code="0" action="%(AC01_shift)s" />
+      <key code="1" action="%(AC02_shift)s" />
+      <key code="2" action="%(AC03_shift)s" />
+      <key code="3" action="%(AC04_shift)s" />
+      <key code="4" action="%(AC06_shift)s" />
+      <key code="5" action="%(AC05_shift)s" />
+      <key code="6" action="%(AB01_shift)s" />
+      <key code="7" action="%(AB02_shift)s" />
+      <key code="8" action="%(AB03_shift)s" />
+      <key code="9" action="%(AB04_shift)s" />
+      <key code="10" action="%(TLDE_shift)s" />
+      <key code="11" action="%(AB05_shift)s" />
+      <key code="12" action="%(AD01_shift)s" />
+      <key code="13" action="%(AD02_shift)s" />
+      <key code="14" action="%(AD03_shift)s" />
+      <key code="15" action="%(AD04_shift)s" />
+      <key code="16" action="%(AD06_shift)s" />
+      <key code="17" action="%(AD05_shift)s" />
+      <key code="18" action="%(AE01_shift)s" />
+      <key code="19" action="%(AE02_shift)s" />
+      <key code="20" action="%(AE03_shift)s" />
+      <key code="21" action="%(AE04_shift)s" />
+      <key code="22" action="%(AE06_shift)s" />
+      <key code="23" action="%(AE05_shift)s" />
+      <key code="24" action="%(AE12_shift)s" />
+      <key code="25" action="%(AE09_shift)s" />
+      <key code="26" action="%(AE07_shift)s" />
+      <key code="27" action="%(AE11_shift)s" />
+      <key code="28" action="%(AE08_shift)s" />
+      <key code="29" action="%(AE10_shift)s" />
+      <key code="30" action="%(AD12_shift)s" />
+      <key code="31" action="%(AD09_shift)s" />
+      <key code="32" action="%(AD07_shift)s" />
+      <key code="33" action="%(AD11_shift)s" />
+      <key code="34" action="%(AD08_shift)s" />
+      <key code="35" action="%(AD10_shift)s" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" action="%(AC09_shift)s" />
+      <key code="38" action="%(AC07_shift)s" />
+      <key code="39" action="%(AC11_shift)s" />
+      <key code="40" action="%(AC08_shift)s" />
+      <key code="41" action="%(AC10_shift)s" />
+      <key code="42" action="%(BKSL_shift)s" />
+      <key code="43" action="%(AB08_shift)s" />
+      <key code="44" action="%(AB10_shift)s" />
+      <key code="45" action="%(AB06_shift)s" />
+      <key code="46" action="%(AB07_shift)s" />
+      <key code="47" action="%(AB09_shift)s" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action="%(SPCE_shift)s" />
+      <key code="50" action="%(LSGT_shift)s" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" action="," /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" action="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" action="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+    </keyMap>
+    <keyMap index="2">  <!-- caps lock -->
+      <key code="0" action="%(AC01_capslock)s" />
+      <key code="1" action="%(AC02_capslock)s" />
+      <key code="2" action="%(AC03_capslock)s" />
+      <key code="3" action="%(AC04_capslock)s" />
+      <key code="4" action="%(AC06_capslock)s" />
+      <key code="5" action="%(AC05_capslock)s" />
+      <key code="6" action="%(AB01_capslock)s" />
+      <key code="7" action="%(AB02_capslock)s" />
+      <key code="8" action="%(AB03_capslock)s" />
+      <key code="9" action="%(AB04_capslock)s" />
+      <key code="10" action="%(TLDE_capslock)s" />
+      <key code="11" action="%(AB05_capslock)s" />
+      <key code="12" action="%(AD01_capslock)s" />
+      <key code="13" action="%(AD02_capslock)s" />
+      <key code="14" action="%(AD03_capslock)s" />
+      <key code="15" action="%(AD04_capslock)s" />
+      <key code="16" action="%(AD06_capslock)s" />
+      <key code="17" action="%(AD05_capslock)s" />
+      <key code="18" action="%(AE01_capslock)s" />
+      <key code="19" action="%(AE02_capslock)s" />
+      <key code="20" action="%(AE03_capslock)s" />
+      <key code="21" action="%(AE04_capslock)s" />
+      <key code="22" action="%(AE06_capslock)s" />
+      <key code="23" action="%(AE05_capslock)s" />
+      <key code="24" action="%(AE12_capslock)s" />
+      <key code="25" action="%(AE09_capslock)s" />
+      <key code="26" action="%(AE07_capslock)s" />
+      <key code="27" action="%(AE11_capslock)s" />
+      <key code="28" action="%(AE08_capslock)s" />
+      <key code="29" action="%(AE10_capslock)s" />
+      <key code="30" action="%(AD12_capslock)s" />
+      <key code="31" action="%(AD09_capslock)s" />
+      <key code="32" action="%(AD07_capslock)s" />
+      <key code="33" action="%(AD11_capslock)s" />
+      <key code="34" action="%(AD08_capslock)s" />
+      <key code="35" action="%(AD10_capslock)s" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" action="%(AC09_capslock)s" />
+      <key code="38" action="%(AC07_capslock)s" />
+      <key code="39" action="%(AC11_capslock)s" />
+      <key code="40" action="%(AC08_capslock)s" />
+      <key code="41" action="%(AC10_capslock)s" />
+      <key code="42" action="%(BKSL_capslock)s" />
+      <key code="43" action="%(AB08_capslock)s" />
+      <key code="44" action="%(AB10_capslock)s" />
+      <key code="45" action="%(AB06_capslock)s" />
+      <key code="46" action="%(AB07_capslock)s" />
+      <key code="47" action="%(AB09_capslock)s" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action="%(SPCE_capslock)s" />
+      <key code="50" action="%(LSGT_capslock)s" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" action="." /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" action="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" action="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+    </keyMap>
+    <keyMap index="3">  <!-- shift caps lock -->
+      <key code="0" action="%(AC01_shift_capslock)s" />
+      <key code="1" action="%(AC02_shift_capslock)s" />
+      <key code="2" action="%(AC03_shift_capslock)s" />
+      <key code="3" action="%(AC04_shift_capslock)s" />
+      <key code="4" action="%(AC06_shift_capslock)s" />
+      <key code="5" action="%(AC05_shift_capslock)s" />
+      <key code="6" action="%(AB01_shift_capslock)s" />
+      <key code="7" action="%(AB02_shift_capslock)s" />
+      <key code="8" action="%(AB03_shift_capslock)s" />
+      <key code="9" action="%(AB04_shift_capslock)s" />
+      <key code="10" action="%(TLDE_shift_capslock)s" />
+      <key code="11" action="%(AB05_shift_capslock)s" />
+      <key code="12" action="%(AD01_shift_capslock)s" />
+      <key code="13" action="%(AD02_shift_capslock)s" />
+      <key code="14" action="%(AD03_shift_capslock)s" />
+      <key code="15" action="%(AD04_shift_capslock)s" />
+      <key code="16" action="%(AD06_shift_capslock)s" />
+      <key code="17" action="%(AD05_shift_capslock)s" />
+      <key code="18" action="%(AE01_shift_capslock)s" />
+      <key code="19" action="%(AE02_shift_capslock)s" />
+      <key code="20" action="%(AE03_shift_capslock)s" />
+      <key code="21" action="%(AE04_shift_capslock)s" />
+      <key code="22" action="%(AE06_shift_capslock)s" />
+      <key code="23" action="%(AE05_shift_capslock)s" />
+      <key code="24" action="%(AE12_shift_capslock)s" />
+      <key code="25" action="%(AE09_shift_capslock)s" />
+      <key code="26" action="%(AE07_shift_capslock)s" />
+      <key code="27" action="%(AE11_shift_capslock)s" />
+      <key code="28" action="%(AE08_shift_capslock)s" />
+      <key code="29" action="%(AE10_shift_capslock)s" />
+      <key code="30" action="%(AD12_shift_capslock)s" />
+      <key code="31" action="%(AD09_shift_capslock)s" />
+      <key code="32" action="%(AD07_shift_capslock)s" />
+      <key code="33" action="%(AD11_shift_capslock)s" />
+      <key code="34" action="%(AD08_shift_capslock)s" />
+      <key code="35" action="%(AD10_shift_capslock)s" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" action="%(AC09_shift_capslock)s" />
+      <key code="38" action="%(AC07_shift_capslock)s" />
+      <key code="39" action="%(AC11_shift_capslock)s" />
+      <key code="40" action="%(AC08_shift_capslock)s" />
+      <key code="41" action="%(AC10_shift_capslock)s" />
+      <key code="42" action="%(BKSL_shift_capslock)s" />
+      <key code="43" action="%(AB08_shift_capslock)s" />
+      <key code="44" action="%(AB10_shift_capslock)s" />
+      <key code="45" action="%(AB06_shift_capslock)s" />
+      <key code="46" action="%(AB07_shift_capslock)s" />
+      <key code="47" action="%(AB09_shift_capslock)s" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action="%(SPCE_shift_capslock)s" />
+      <key code="50" action="%(LSGT_shift_capslock)s" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" action="." /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" action="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" action="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+    </keyMap>
+    <keyMap index="4">  <!-- option -->
+      <key code="0" action="%(AC01_option)s" />
+      <key code="1" action="%(AC02_option)s" />
+      <key code="2" action="%(AC03_option)s" />
+      <key code="3" action="%(AC04_option)s" />
+      <key code="4" action="%(AC06_option)s" />
+      <key code="5" action="%(AC05_option)s" />
+      <key code="6" action="%(AB01_option)s" />
+      <key code="7" action="%(AB02_option)s" />
+      <key code="8" action="%(AB03_option)s" />
+      <key code="9" action="%(AB04_option)s" />
+      <key code="10" action="%(TLDE_option)s" />
+      <key code="11" action="%(AB05_option)s" />
+      <key code="12" action="%(AD01_option)s" />
+      <key code="13" action="%(AD02_option)s" />
+      <key code="14" action="%(AD03_option)s" />
+      <key code="15" action="%(AD04_option)s" />
+      <key code="16" action="%(AD06_option)s" />
+      <key code="17" action="%(AD05_option)s" />
+      <key code="18" action="%(AE01_option)s" />
+      <key code="19" action="%(AE02_option)s" />
+      <key code="20" action="%(AE03_option)s" />
+      <key code="21" action="%(AE04_option)s" />
+      <key code="22" action="%(AE06_option)s" />
+      <key code="23" action="%(AE05_option)s" />
+      <key code="24" action="%(AE12_option)s" />
+      <key code="25" action="%(AE09_option)s" />
+      <key code="26" action="%(AE07_option)s" />
+      <key code="27" action="%(AE11_option)s" />
+      <key code="28" action="%(AE08_option)s" />
+      <key code="29" action="%(AE10_option)s" />
+      <key code="30" action="%(AD12_option)s" />
+      <key code="31" action="%(AD09_option)s" />
+      <key code="32" action="%(AD07_option)s" />
+      <key code="33" action="%(AD11_option)s" />
+      <key code="34" action="%(AD08_option)s" />
+      <key code="35" action="%(AD10_option)s" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" action="%(AC09_option)s" />
+      <key code="38" action="%(AC07_option)s" />
+      <key code="39" action="%(AC11_option)s" />
+      <key code="40" action="%(AC08_option)s" />
+      <key code="41" action="%(AC10_option)s" />
+      <key code="42" action="%(BKSL_option)s" />
+      <key code="43" action="%(AB08_option)s" />
+      <key code="44" action="%(AB10_option)s" />
+      <key code="45" action="%(AB06_option)s" />
+      <key code="46" action="%(AB07_option)s" />
+      <key code="47" action="%(AB09_option)s" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action="%(SPCE_option)s" />
+      <key code="50" action="%(LSGT_option)s" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" action="," /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" action="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" action="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+    </keyMap>
+    <keyMap index="5">  <!-- shift option -->
+      <key code="0" action="%(AC01_shift_option)s" />
+      <key code="1" action="%(AC02_shift_option)s" />
+      <key code="2" action="%(AC03_shift_option)s" />
+      <key code="3" action="%(AC04_shift_option)s" />
+      <key code="4" action="%(AC06_shift_option)s" />
+      <key code="5" action="%(AC05_shift_option)s" />
+      <key code="6" action="%(AB01_shift_option)s" />
+      <key code="7" action="%(AB02_shift_option)s" />
+      <key code="8" action="%(AB03_shift_option)s" />
+      <key code="9" action="%(AB04_shift_option)s" />
+      <key code="10" action="%(TLDE_shift_option)s" />
+      <key code="11" action="%(AB05_shift_option)s" />
+      <key code="12" action="%(AD01_shift_option)s" />
+      <key code="13" action="%(AD02_shift_option)s" />
+      <key code="14" action="%(AD03_shift_option)s" />
+      <key code="15" action="%(AD04_shift_option)s" />
+      <key code="16" action="%(AD06_shift_option)s" />
+      <key code="17" action="%(AD05_shift_option)s" />
+      <key code="18" action="%(AE01_shift_option)s" />
+      <key code="19" action="%(AE02_shift_option)s" />
+      <key code="20" action="%(AE03_shift_option)s" />
+      <key code="21" action="%(AE04_shift_option)s" />
+      <key code="22" action="%(AE06_shift_option)s" />
+      <key code="23" action="%(AE05_shift_option)s" />
+      <key code="24" action="%(AE12_shift_option)s" />
+      <key code="25" action="%(AE09_shift_option)s" />
+      <key code="26" action="%(AE07_shift_option)s" />
+      <key code="27" action="%(AE11_shift_option)s" />
+      <key code="28" action="%(AE08_shift_option)s" />
+      <key code="29" action="%(AE10_shift_option)s" />
+      <key code="30" action="%(AD12_shift_option)s" />
+      <key code="31" action="%(AD09_shift_option)s" />
+      <key code="32" action="%(AD07_shift_option)s" />
+      <key code="33" action="%(AD11_shift_option)s" />
+      <key code="34" action="%(AD08_shift_option)s" />
+      <key code="35" action="%(AD10_shift_option)s" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" action="%(AC09_shift_option)s" />
+      <key code="38" action="%(AC07_shift_option)s" />
+      <key code="39" action="%(AC11_shift_option)s" />
+      <key code="40" action="%(AC08_shift_option)s" />
+      <key code="41" action="%(AC10_shift_option)s" />
+      <key code="42" action="%(BKSL_shift_option)s" />
+      <key code="43" action="%(AB08_shift_option)s" />
+      <key code="44" action="%(AB10_shift_option)s" />
+      <key code="45" action="%(AB06_shift_option)s" />
+      <key code="46" action="%(AB07_shift_option)s" />
+      <key code="47" action="%(AB09_shift_option)s" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action="%(SPCE_shift_option)s" />
+      <key code="50" action="%(LSGT_shift_option)s" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" action="." /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" action="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" action="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+    </keyMap>
+    <keyMap index="6">  <!-- shift option caps lock -->
+      <key code="0" action="%(AC01_shift_option_capslock)s" />
+      <key code="1" action="%(AC02_shift_option_capslock)s" />
+      <key code="2" action="%(AC03_shift_option_capslock)s" />
+      <key code="3" action="%(AC04_shift_option_capslock)s" />
+      <key code="4" action="%(AC06_shift_option_capslock)s" />
+      <key code="5" action="%(AC05_shift_option_capslock)s" />
+      <key code="6" action="%(AB01_shift_option_capslock)s" />
+      <key code="7" action="%(AB02_shift_option_capslock)s" />
+      <key code="8" action="%(AB03_shift_option_capslock)s" />
+      <key code="9" action="%(AB04_shift_option_capslock)s" />
+      <key code="10" action="%(TLDE_shift_option_capslock)s" />
+      <key code="11" action="%(AB05_shift_option_capslock)s" />
+      <key code="12" action="%(AD01_shift_option_capslock)s" />
+      <key code="13" action="%(AD02_shift_option_capslock)s" />
+      <key code="14" action="%(AD03_shift_option_capslock)s" />
+      <key code="15" action="%(AD04_shift_option_capslock)s" />
+      <key code="16" action="%(AD06_shift_option_capslock)s" />
+      <key code="17" action="%(AD05_shift_option_capslock)s" />
+      <key code="18" action="%(AE01_shift_option_capslock)s" />
+      <key code="19" action="%(AE02_shift_option_capslock)s" />
+      <key code="20" action="%(AE03_shift_option_capslock)s" />
+      <key code="21" action="%(AE04_shift_option_capslock)s" />
+      <key code="22" action="%(AE06_shift_option_capslock)s" />
+      <key code="23" action="%(AE05_shift_option_capslock)s" />
+      <key code="24" action="%(AE12_shift_option_capslock)s" />
+      <key code="25" action="%(AE09_shift_option_capslock)s" />
+      <key code="26" action="%(AE07_shift_option_capslock)s" />
+      <key code="27" action="%(AE11_shift_option_capslock)s" />
+      <key code="28" action="%(AE08_shift_option_capslock)s" />
+      <key code="29" action="%(AE10_shift_option_capslock)s" />
+      <key code="30" action="%(AD12_shift_option_capslock)s" />
+      <key code="31" action="%(AD09_shift_option_capslock)s" />
+      <key code="32" action="%(AD07_shift_option_capslock)s" />
+      <key code="33" action="%(AD11_shift_option_capslock)s" />
+      <key code="34" action="%(AD08_shift_option_capslock)s" />
+      <key code="35" action="%(AD10_shift_option_capslock)s" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" action="%(AC09_shift_option_capslock)s" />
+      <key code="38" action="%(AC07_shift_option_capslock)s" />
+      <key code="39" action="%(AC11_shift_option_capslock)s" />
+      <key code="40" action="%(AC08_shift_option_capslock)s" />
+      <key code="41" action="%(AC10_shift_option_capslock)s" />
+      <key code="42" action="%(BKSL_shift_option_capslock)s" />
+      <key code="43" action="%(AB08_shift_option_capslock)s" />
+      <key code="44" action="%(AB10_shift_option_capslock)s" />
+      <key code="45" action="%(AB06_shift_option_capslock)s" />
+      <key code="46" action="%(AB07_shift_option_capslock)s" />
+      <key code="47" action="%(AB09_shift_option_capslock)s" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action="%(SPCE_shift_option_capslock)s" />
+      <key code="50" action="%(LSGT_shift_option_capslock)s" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" action="." /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" action="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" action="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+    </keyMap>
+    <keyMap index="7">  <!-- option caps lock -->
+      <key code="0" action="%(AC01_option_capslock)s" />
+      <key code="1" action="%(AC02_option_capslock)s" />
+      <key code="2" action="%(AC03_option_capslock)s" />
+      <key code="3" action="%(AC04_option_capslock)s" />
+      <key code="4" action="%(AC06_option_capslock)s" />
+      <key code="5" action="%(AC05_option_capslock)s" />
+      <key code="6" action="%(AB01_option_capslock)s" />
+      <key code="7" action="%(AB02_option_capslock)s" />
+      <key code="8" action="%(AB03_option_capslock)s" />
+      <key code="9" action="%(AB04_option_capslock)s" />
+      <key code="10" action="%(TLDE_option_capslock)s" />
+      <key code="11" action="%(AB05_option_capslock)s" />
+      <key code="12" action="%(AD01_option_capslock)s" />
+      <key code="13" action="%(AD02_option_capslock)s" />
+      <key code="14" action="%(AD03_option_capslock)s" />
+      <key code="15" action="%(AD04_option_capslock)s" />
+      <key code="16" action="%(AD06_option_capslock)s" />
+      <key code="17" action="%(AD05_option_capslock)s" />
+      <key code="18" action="%(AE01_option_capslock)s" />
+      <key code="19" action="%(AE02_option_capslock)s" />
+      <key code="20" action="%(AE03_option_capslock)s" />
+      <key code="21" action="%(AE04_option_capslock)s" />
+      <key code="22" action="%(AE06_option_capslock)s" />
+      <key code="23" action="%(AE05_option_capslock)s" />
+      <key code="24" action="%(AE12_option_capslock)s" />
+      <key code="25" action="%(AE09_option_capslock)s" />
+      <key code="26" action="%(AE07_option_capslock)s" />
+      <key code="27" action="%(AE11_option_capslock)s" />
+      <key code="28" action="%(AE08_option_capslock)s" />
+      <key code="29" action="%(AE10_option_capslock)s" />
+      <key code="30" action="%(AD12_option_capslock)s" />
+      <key code="31" action="%(AD09_option_capslock)s" />
+      <key code="32" action="%(AD07_option_capslock)s" />
+      <key code="33" action="%(AD11_option_capslock)s" />
+      <key code="34" action="%(AD08_option_capslock)s" />
+      <key code="35" action="%(AD10_option_capslock)s" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" action="%(AC09_option_capslock)s" />
+      <key code="38" action="%(AC07_option_capslock)s" />
+      <key code="39" action="%(AC11_option_capslock)s" />
+      <key code="40" action="%(AC08_option_capslock)s" />
+      <key code="41" action="%(AC10_option_capslock)s" />
+      <key code="42" action="%(BKSL_option_capslock)s" />
+      <key code="43" action="%(AB08_option_capslock)s" />
+      <key code="44" action="%(AB10_option_capslock)s" />
+      <key code="45" action="%(AB06_option_capslock)s" />
+      <key code="46" action="%(AB07_option_capslock)s" />
+      <key code="47" action="%(AB09_option_capslock)s" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action="%(SPCE_option_capslock)s" />
+      <key code="50" action="%(LSGT_option_capslock)s" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" action="," /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" action="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" action="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+    </keyMap>
+    <keyMap index="8">  <!-- option command -->
+      <key code="0" action="%(AC01_option_command)s" />
+      <key code="1" action="%(AC02_option_command)s" />
+      <key code="2" action="%(AC03_option_command)s" />
+      <key code="3" action="%(AC04_option_command)s" />
+      <key code="4" action="%(AC06_option_command)s" />
+      <key code="5" action="%(AC05_option_command)s" />
+      <key code="6" action="%(AB01_option_command)s" />
+      <key code="7" action="%(AB02_option_command)s" />
+      <key code="8" action="%(AB03_option_command)s" />
+      <key code="9" action="%(AB04_option_command)s" />
+      <key code="10" action="%(TLDE_option_command)s" />
+      <key code="11" action="%(AB05_option_command)s" />
+      <key code="12" action="%(AD01_option_command)s" />
+      <key code="13" action="%(AD02_option_command)s" />
+      <key code="14" action="%(AD03_option_command)s" />
+      <key code="15" action="%(AD04_option_command)s" />
+      <key code="16" action="%(AD06_option_command)s" />
+      <key code="17" action="%(AD05_option_command)s" />
+      <key code="18" action="%(AE01_option_command)s" />
+      <key code="19" action="%(AE02_option_command)s" />
+      <key code="20" action="%(AE03_option_command)s" />
+      <key code="21" action="%(AE04_option_command)s" />
+      <key code="22" action="%(AE06_option_command)s" />
+      <key code="23" action="%(AE05_option_command)s" />
+      <key code="24" action="%(AE12_option_command)s" />
+      <key code="25" action="%(AE09_option_command)s" />
+      <key code="26" action="%(AE07_option_command)s" />
+      <key code="27" action="%(AE11_option_command)s" />
+      <key code="28" action="%(AE08_option_command)s" />
+      <key code="29" action="%(AE10_option_command)s" />
+      <key code="30" action="%(AD12_option_command)s" />
+      <key code="31" action="%(AD09_option_command)s" />
+      <key code="32" action="%(AD07_option_command)s" />
+      <key code="33" action="%(AD11_option_command)s" />
+      <key code="34" action="%(AD08_option_command)s" />
+      <key code="35" action="%(AD10_option_command)s" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" action="%(AC09_option_command)s" />
+      <key code="38" action="%(AC07_option_command)s" />
+      <key code="39" action="%(AC11_option_command)s" />
+      <key code="40" action="%(AC08_option_command)s" />
+      <key code="41" action="%(AC10_option_command)s" />
+      <key code="42" action="%(BKSL_option_command)s" />
+      <key code="43" action="%(AB08_option_command)s" />
+      <key code="44" action="%(AB10_option_command)s" />
+      <key code="45" action="%(AB06_option_command)s" />
+      <key code="46" action="%(AB07_option_command)s" />
+      <key code="47" action="%(AB09_option_command)s" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action="%(SPCE_option_command)s" />
+      <key code="50" action="%(LSGT_option_command)s" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" action="," /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" action="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" action="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+    </keyMap>
+    <keyMap index="9">  <!-- control -->
+      <key code="0" output="&#x0001;" />
+      <key code="1" output="&#x0015;" />
+      <key code="2" output="&#x0009;" />
+      <key code="3" output="&#x0005;" />
+      <key code="4" output="&#x0003;" />
+      <key code="5" output="," />
+      <key code="6" output=";" />
+      <key code="7" output="&#x0019;" />
+      <key code="8" output="&#x0008;" />
+      <key code="9" output="." />
+      <key code="10" action="0" />
+      <key code="11" output="&#x000b;" />
+      <key code="12" output="&#x0002;" />
+      <key code="13" output="/" />
+      <key code="14" output="&#x0010;" />
+      <key code="15" output="&#x000f;" />
+      <key code="16" output="&#x001c;" />
+      <key code="17" output="&#x001b;" />
+      <key code="18" action="1" />
+      <key code="19" action="2" />
+      <key code="20" action="3" />
+      <key code="21" action="4" />
+      <key code="22" action="6" />
+      <key code="23" action="5" />
+      <key code="24" action="=" />
+      <key code="25" action="9" />
+      <key code="26" action="7" />
+      <key code="27" output="&#x001f;" />
+      <key code="28" action="8" />
+      <key code="29" action="0" />
+      <key code="30" output="&#x0017;" />
+      <key code="31" output="&#x000c;" />
+      <key code="32" output="&#x0016;" />
+      <key code="33" output="&#x001a;" />
+      <key code="34" output="&#x0004;" />
+      <key code="35" output="&#x0006;" />
+      <key code="36" output="&#x000d;" /> <!-- Return -->
+      <key code="37" output="&#x000e;" />
+      <key code="38" output="&#x0014;" />
+      <key code="39" output="&#x000d;" />
+      <key code="40" output="&#x0013;" />
+      <key code="41" output="&#x0012;" />
+      <key code="42" output="&#x001d;" />
+      <key code="43" output="&#x0007;" />
+      <key code="44" output="&#x000a;" />
+      <key code="45" output="'" />
+      <key code="46" output="&#x0011;" />
+      <key code="47" output="&#x0018;" />
+      <key code="48" output="&#x0009;" /> <!-- Tab -->
+      <key code="49" action=" " /> <!-- Space -->
+      <key code="50" output="`" />
+      <key code="51" output="&#x0008;" /> <!-- Backspace -->
+      <key code="52" output="&#x0003;" /> <!-- Enter (Fn-Return) -->
+      <key code="53" output="&#x001b;" /> <!-- Escape -->
+      <!-- gap, 54 through 64 -->
+      <key code="65" output="." /> <!-- keypad -->
+      <key code="66" output="&#x001d;" /> <!-- keypad right arrow? -->
+      <key code="67" output="*" /> <!-- keypad -->
+      <!-- gap, 68 -->
+      <key code="69" action="+" /> <!-- keypad -->
+      <key code="70" output="&#x001c;" /> <!-- keypad left arrow? -->
+      <key code="71" output="&#x001b;" /> <!-- Clear -->
+      <key code="72" output="&#x001f;" /> <!-- keypad down arrow? -->
+      <!-- gap, 73 through 74 -->
+      <key code="75" output="/" /> <!-- keypad -->
+      <key code="76" output="&#x0003;" /> <!-- Enter -->
+      <key code="77" output="&#x001e;" /> <!-- keypad up arrow? -->
+      <key code="78" action="-" /> <!-- keypad -->
+      <!-- gap, 79 through 80 -->
+      <key code="81" action="=" /> <!-- keypad -->
+      <key code="82" action="0" /> <!-- keypad -->
+      <key code="83" action="1" /> <!-- keypad -->
+      <key code="84" action="2" /> <!-- keypad -->
+      <key code="85" action="3" /> <!-- keypad -->
+      <key code="86" action="4" /> <!-- keypad -->
+      <key code="87" action="5" /> <!-- keypad -->
+      <key code="88" action="6" /> <!-- keypad -->
+      <key code="89" action="7" /> <!-- keypad -->
+      <!-- gap, 90 -->
+      <key code="91" action="8" /> <!-- keypad -->
+      <key code="92" action="9" /> <!-- keypad -->
+      <!-- gap, 93 through 95 -->
+      <key code="96" output="&#x0010;" /> <!-- F5 -->
+      <key code="97" output="&#x0010;" /> <!-- F6 -->
+      <key code="98" output="&#x0010;" /> <!-- F7 -->
+      <key code="99" output="&#x0010;" /> <!-- F3 -->
+      <key code="100" output="&#x0010;" /> <!-- F8 -->
+      <key code="101" output="&#x0010;" /> <!-- F9 -->
+      <key code="102" output="&#x0010;" /> <!-- ?? -->
+      <key code="103" output="&#x0010;" /> <!-- F11 -->
+      <key code="104" output="&#x0010;" /> <!-- ?? -->
+      <key code="105" output="&#x0010;" /> <!-- F13 -->
+      <key code="106" output="&#x0010;" /> <!-- F16 -->
+      <key code="107" output="&#x0010;" /> <!-- F14 -->
+      <key code="108" output="&#x0010;" /> <!-- ?? -->
+      <key code="109" output="&#x0010;" /> <!-- F10 -->
+      <key code="110" output="&#x0010;" /> <!-- ?? -->
+      <key code="111" output="&#x0010;" /> <!-- F12 -->
+      <key code="112" output="&#x0010;" /> <!-- ?? -->
+      <key code="113" output="&#x0010;" /> <!-- F15 -->
+      <key code="114" output="&#x0005;" /> <!-- Help -->
+      <key code="115" output="&#x0001;" /> <!-- Home -->
+      <key code="116" output="&#x000b;" /> <!-- Page Up -->
+      <key code="117" output="&#x007f;" /> <!-- Delete -->
+      <key code="118" output="&#x0010;" /> <!-- F4 -->
+      <key code="119" output="&#x0004;" /> <!-- End -->
+      <key code="120" output="&#x0010;" /> <!-- F2 -->
+      <key code="121" output="&#x000c;" /> <!-- Page Down -->
+      <key code="122" output="&#x0010;" /> <!-- F1 -->
+      <key code="123" output="&#x001c;" /> <!-- left arrow -->
+      <key code="124" output="&#x001d;" /> <!-- right arrow -->
+      <key code="125" output="&#x001f;" /> <!-- down arrow -->
+      <key code="126" output="&#x001e;" /> <!-- up arrow -->
+      <!-- gap, 127 -->
+    </keyMap>
+  </keyMapSet>
+  <keyMapSet id="ANSI">
+    <keyMap index="0" baseMapSet="ISO" baseIndex="0">  <!-- No modifiers -->
+      <key code="50" output="$" />
+    </keyMap>
+    <keyMap index="1" baseMapSet="ISO" baseIndex="1">  <!-- shift -->
+      <key code="50" output="#" />
+    </keyMap>
+    <keyMap index="2" baseMapSet="ISO" baseIndex="2">  <!-- caps lock -->
+      <key code="50" output="$" />
+    </keyMap>
+    <keyMap index="3" baseMapSet="ISO" baseIndex="3">  <!-- shift caps lock -->
+      <key code="50" output="#" />
+    </keyMap>
+    <keyMap index="4" baseMapSet="ISO" baseIndex="4">  <!-- option -->
+      <key code="50" output="" />
+    </keyMap>
+    <keyMap index="5" baseMapSet="ISO" baseIndex="5">  <!-- shift option -->
+      <key code="50" output="" />
+    </keyMap>
+    <keyMap index="6" baseMapSet="ISO" baseIndex="6">  <!-- shift option caps lock -->
+      <key code="50" output="" />
+    </keyMap>
+    <keyMap index="7" baseMapSet="ISO" baseIndex="7">  <!-- option caps lock -->
+      <key code="50" output="" />
+    </keyMap>
+    <keyMap index="8" baseMapSet="ISO" baseIndex="8">  <!-- option command -->
+      <key code="50" output="" />
+    </keyMap>
+    <keyMap index="9" baseMapSet="ISO" baseIndex="9">  <!-- control -->
+      <key code="50" output="`" />
+    </keyMap>
+  </keyMapSet>
+  
+%(actionsAndTerminators)s
+
+</keyboard>
