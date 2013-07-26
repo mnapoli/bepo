@@ -28,4 +28,4 @@ Plus simple de modifier directement `/usr/share/X11/xkb/symbols/fr` (faire un ba
 
 Une fois le fichier modifier, redémarrer puis supprimer la disposition bépo (passer en azerty), puis la ré-ajouter.
 
-Pour les raccourcis clavier, utiliser AutoKey par exemple.
+Pour les raccourcis clavier, utiliser AutoKey (par exemple créer une phrase `<ctrl>+v` et la binder à `Ctrl+.`).
