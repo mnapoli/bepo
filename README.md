@@ -24,8 +24,22 @@ Installation testée et OK.
 
 ### Ubuntu
 
-Plus simple de modifier directement `/usr/share/X11/xkb/symbols/fr` (faire un backup).
+Modifier `/usr/share/X11/xkb/symbols/fr` (faire un backup) :
 
-Une fois le fichier modifier, redémarrer puis supprimer la disposition bépo (passer en azerty), puis la ré-ajouter.
+- copier-coller la définition du bépo (pas bépo latin9)
+- modifier la nouvelle section (remplacer bepo par bepom, et le nom par Bépo Matthieu)
+
+Modifier `/usr/share/X11/xkb/rules/evdev.xml` et `/usr/share/X11/xkb/rules/base.xml` pour ajouter à la suite des déclarations bepo :
+
+```xml
+<variant>
+  <configItem>
+    <name>bepom</name>
+    <description>French (Bepo Matthieu)</description>
+  </configItem>
+</variant>
+```
+
+En rouvrant le panneau de configuration, la nouvelle disposition "Bépo Matthieu" devrait apparaitre.
 
 Pour les raccourcis clavier, utiliser AutoKey (par exemple créer une phrase `<ctrl>+v` et la binder à `Ctrl+.`).
