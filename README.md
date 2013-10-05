@@ -22,6 +22,12 @@ Installation testée et OK. Utiliser l'exécutable dans le dossier result/...
 
 Installation testée et OK.
 
+- installer le bépo officiel
+- télécharger le fichier `results/final/macosx/layout-matthieu.keylayout`
+- ouvrir `/Library/Keyboard Layouts` et ouvrir le paquet dvorak-bepo -> `Contents/Resources/`
+- ajouter le fichier .keylayout
+- rouvrir la session et sélectionner `bépo-matthieu` dans le panneau de configuration
+
 ### Ubuntu
 
 Modifier `/usr/share/X11/xkb/symbols/fr` (faire un backup) :
