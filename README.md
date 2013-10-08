@@ -28,6 +28,12 @@ Installation testée et OK.
 - ajouter le fichier .keylayout
 - rouvrir la session et sélectionner `bépo-matthieu` dans le panneau de configuration
 
+Installer KeyRemap4Macbook et cocher
+
+- Command_L to Control_L (except Terminal, …)
+- Control_L to Command_L (except Terminal, …)
+- Use PC style Home/End #2
+
 ### Ubuntu
 
 Modifier `/usr/share/X11/xkb/symbols/fr` (faire un backup) :
