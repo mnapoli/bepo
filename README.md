@@ -97,7 +97,7 @@ which is completely different.
 Modifier `/usr/share/X11/xkb/symbols/fr` (faire un backup) :
 
 - copier-coller la définition du bépo (pas bépo latin9)
-- modifier la nouvelle section (remplacer bepo par bepom, et le nom par Bépo Matthieu)
+- modifier la nouvelle section
   - remplacer bepo par bepom
   - remplacer le nom par "Bepo Matthieu"
   - inverser "^" et "w"
