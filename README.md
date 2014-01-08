@@ -98,6 +98,11 @@ Modifier `/usr/share/X11/xkb/symbols/fr` (faire un backup) :
 
 - copier-coller la définition du bépo (pas bépo latin9)
 - modifier la nouvelle section (remplacer bepo par bepom, et le nom par Bépo Matthieu)
+  - remplacer bepo par bepom
+  - remplacer le nom par "Bepo Matthieu"
+  - inverser "^" et "w"
+  - inverser "«" et "<"
+  - inverser "»" et ">"
 
 Modifier `/usr/share/X11/xkb/rules/evdev.xml` et `/usr/share/X11/xkb/rules/base.xml` pour ajouter à la suite des déclarations bepo :
 
