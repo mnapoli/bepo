@@ -28,11 +28,7 @@ Installation testée et OK.
 - ajouter le fichier .keylayout
 - rouvrir la session et sélectionner `bépo-matthieu` dans le panneau de configuration
 
-Installer KeyRemap4Macbook et cocher
-
-- Command_L to Control_L (except Terminal, …)
-- Control_L to Command_L (except Terminal, …)
-- Use PC style Home/End #2
+Optionel : inverser Control et Command dans les préférences système.
 
 Créer un fichier `~/Library/KeyBindings/DefaultKeyBinding.dict` contenant :
 
@@ -87,8 +83,6 @@ which is completely different.
 
 "~-" = ("insertText:", "->");                                /* Alt + - */
 "~\\$" = ("insertText:", "$this->");                         /* Alt + $ */
-"~," = ("moveToEndOfLine:", "insertText:", ";");             /* Alt + , */
-"~y" = ("moveToEndOfLine:", "insertText:", " {", "insertNewline:"); /* Alt + y */
 }
 ```
 
