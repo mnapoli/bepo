@@ -20,11 +20,11 @@ Installation testée et OK. Utiliser l'exécutable dans le dossier result/...
 
 ### OS X
 
-Installation testée et OK.
+Installation testée et OK. Attention, ne marche que quand installé dans `~`, pas dans `/`.
 
 - installer le bépo officiel
 - télécharger le fichier `results/final/macosx/layout-matthieu.keylayout`
-- ouvrir `/Library/Keyboard Layouts` et ouvrir le paquet dvorak-bepo -> `Contents/Resources/`
+- ouvrir `~/Library/Keyboard Layouts` et ouvrir le paquet dvorak-bepo -> `Contents/Resources/`
 - ajouter le fichier .keylayout
 - rouvrir la session et sélectionner `bépo-matthieu` dans le panneau de configuration
 
